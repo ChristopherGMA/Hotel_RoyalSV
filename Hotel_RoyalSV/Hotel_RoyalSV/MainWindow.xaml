@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hotel_RoyalSV"
         mc:Ignorable="d"
-        Title="Menu" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FF181818" Foreground="White">
+        Title="Inicio de seción" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FF181818" Foreground="White" Topmost="True" Icon="pack://siteoforigin:,,,/Resources/Hotel Royal SV Logo.ico">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border x:Name="BRD_Titulo" Grid.Row="0" Background="#FF050964">
+            <Label x:Name="LBL_Titulo" Content="HOTEL ROYAL S.V" TabIndex="0" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
     </Grid>
 </Window>
