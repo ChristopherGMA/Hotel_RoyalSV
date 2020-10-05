@@ -11,7 +11,7 @@ namespace Capa_Datos
     public class D_Empleado
     {
         //Defnicion de variables
-        private int _IDEmpelado;
+        private int _ID_Empleado;
         private string _Nombre;
         private string _Apellido;
         private int _Edad;
@@ -27,7 +27,7 @@ namespace Capa_Datos
         private string _Departamento;
 
         //Encapsulamiento
-        public int IDEmpelado { get => _IDEmpelado; set => _IDEmpelado = value; }
+        public int ID_Empleado { get => _ID_Empleado; set => _ID_Empleado = value; }
         public string Nombre { get => _Nombre; set => _Nombre = value; }
         public string Apellido { get => _Apellido; set => _Apellido = value; }
         public int Edad { get => _Edad; set => _Edad = value; }
@@ -50,7 +50,7 @@ namespace Capa_Datos
         public D_Empleado(int id_empleado, string nombre, string apellido, int edad, string correo, string telefono, string celular, string dui, string nit, string isss,
                             string usuario, string contraseña, string puesto, string departamento)
         {
-            this.IDEmpelado = id_empleado;
+            this.ID_Empleado = id_empleado;
             this.Nombre = nombre;
             this.Apellido = apellido;
             this.Edad = edad;
@@ -82,7 +82,7 @@ namespace Capa_Datos
                     SqlParameter ParIDEmpleado = new SqlParameter();
                     ParIDEmpleado.ParameterName = "@IDEmpleado";
                     ParIDEmpleado.SqlDbType = SqlDbType.Int;
-                    ParIDEmpleado.Value = empleado.IDEmpelado;
+                    ParIDEmpleado.Value = empleado.ID_Empleado;
                     cmd.Parameters.Add(ParIDEmpleado);
 
                     SqlParameter ParNombre = new SqlParameter();
@@ -201,7 +201,7 @@ namespace Capa_Datos
                     SqlParameter ParIDEmpleado = new SqlParameter();
                     ParIDEmpleado.ParameterName = "@IDEmpleado";
                     ParIDEmpleado.SqlDbType = SqlDbType.Int;
-                    ParIDEmpleado.Value = empleado.IDEmpelado;
+                    ParIDEmpleado.Value = empleado.ID_Empleado;
                     cmd.Parameters.Add(ParIDEmpleado);
 
                     SqlParameter ParNombre = new SqlParameter();
@@ -321,7 +321,7 @@ namespace Capa_Datos
                     SqlParameter ParIDEmpleado = new SqlParameter();
                     ParIDEmpleado.ParameterName = "@IDEmpleado";
                     ParIDEmpleado.SqlDbType = SqlDbType.Int;
-                    ParIDEmpleado.Value = empleado.IDEmpelado;
+                    ParIDEmpleado.Value = empleado.ID_Empleado;
                     cmd.Parameters.Add(ParIDEmpleado);                    
 
                     RPT = cmd.ExecuteNonQuery() == 1 ? "OK" : "No se inserto el registro";
@@ -352,7 +352,7 @@ namespace Capa_Datos
                     SqlParameter ParIDEmpleado = new SqlParameter();
                     ParIDEmpleado.ParameterName = "@IDEmpleado";
                     ParIDEmpleado.SqlDbType = SqlDbType.Int;
-                    ParIDEmpleado.Value = empleado.IDEmpelado;
+                    ParIDEmpleado.Value = empleado.ID_Empleado;
                     cmd.Parameters.Add(ParIDEmpleado);
 
                     SqlParameter ParPuesto = new SqlParameter();

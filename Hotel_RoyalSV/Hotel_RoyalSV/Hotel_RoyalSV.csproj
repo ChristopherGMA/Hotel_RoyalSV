@@ -98,5 +98,11 @@
   <ItemGroup>
     <None Include="Resources\Hotel Royal SV Logo.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa_Negocio\Capa_Negocio.csproj">
+      <Project>{528bfcab-fe2f-4545-b439-1159ff8aa32e}</Project>
+      <Name>Capa_Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -26,7 +26,7 @@ namespace Capa_Datos.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-FDNLK2A;Initial Catalog=Hotel;User ID=sa;Password=unab")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-D5HTKK5;Initial Catalog=Hotel;User ID=sa;Password=unab")]
         public string HotelConnectionString {
             get {
                 return ((string)(this["HotelConnectionString"]));
