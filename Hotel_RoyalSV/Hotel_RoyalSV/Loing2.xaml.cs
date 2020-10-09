@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Hotel_RoyalSV
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para Loing2.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Loing2 : Window
     {
-        public MainWindow()
+        public Loing2()
         {
             InitializeComponent();
-        }
-
-        private void LBL_Password_Request_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

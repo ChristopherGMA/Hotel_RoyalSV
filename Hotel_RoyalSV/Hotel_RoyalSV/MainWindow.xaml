@@ -17,5 +17,56 @@
         <Border x:Name="BRD_Titulo" Grid.Row="0" Background="#FF050964">
             <Label x:Name="LBL_Titulo" Content="HOTEL ROYAL S.V" TabIndex="0" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Border>
+
+        <Border Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="650"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image x:Name="IMG_User" Grid.Row="0" Grid.Column="0"/>
+
+                <Image x:Name="IMG_Password" Grid.Row="1" Grid.Column="0"/>
+
+                <Image x:Name="IMG_Information" Grid.Row="0" Grid.Column="2"/>
+
+                <TextBlock x:Name="TXT_Usuario" Grid.Column="1" Grid.Row="0" Text="Usuario"/>
+
+                <PasswordBox x:Name="PSW_UserPassword" Grid.Row="1" Grid.Column="1"/>
+
+                <CheckBox x:Name="CHB_User_Client" Grid.Row="2" Grid.Column="1"/>
+
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="2">
+            <Label x:Name="LBL_Password_Request" Content="Has olvidado tu contraseña?" Hyperlink.Click="LBL_Password_Request_Click"/>
+        </Border>
+
+        <Border Grid.Row="3">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="267"/>
+                    <ColumnDefinition Width="267"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BTN_Acept" Content="Aceptar" Grid.Column="0"/>
+
+                <Button x:Name="BTN_SingUp" Content="Registrar" Grid.Column="1"/>
+
+                <Button x:Name="BTN_Cancel" Content="Cancelar" Grid.Column="2"/>
+
+            </Grid>
+        </Border>
+        
     </Grid>
 </Window>
