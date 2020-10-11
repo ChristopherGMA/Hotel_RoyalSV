@@ -408,7 +408,7 @@ namespace Capa_Datos
         //Loing
         public DataTable Loing(D_Empleado empleado)
         {
-            DataTable DAT = new DataTable("Empleado");
+            DataTable DAT = new DataTable("EMPLEADO");
             using (SqlConnection CON = D_Coneccion.Coneccion())
             {
                 try
@@ -426,7 +426,7 @@ namespace Capa_Datos
                     cmd.Parameters.Add(ParUsuario);
 
                     SqlParameter ParContraseña = new SqlParameter();
-                    ParContraseña.ParameterName = "@Contraseña";
+                    ParContraseña.ParameterName = "@Contrasena";
                     ParContraseña.SqlDbType = SqlDbType.VarChar;
                     ParContraseña.Size = 50;
                     ParContraseña.Value = empleado.Contraseña;

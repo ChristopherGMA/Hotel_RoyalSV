@@ -12,7 +12,7 @@ namespace Capa_Datos
 {
     public class D_Random
     {
-        private string[] StoreProcedures = { "SP_BuscarRandomNumber_Cliente", "SP_BuscarRandomNumber_Costos", "SP_BuscarRandomNumber_Empleado"
+        private string[] StoreProcedures = { "SP_BuscarRandomNumber_Cliente", "SP_BuscarRandomNumber_Costos", "SP_BuscarRandomNumber_Empleado",
                                             "SP_BuscarRandomNumber_Habitaciones", "SP_BuscarRandomNumber_Reservas",
                                                 "SP_BuscarRandomNumber_Servicios"};
         private int _ID;

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hotel_RoyalSV"
         mc:Ignorable="d"
-        Title="Inicio de seción" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FF181818" Foreground="White" Topmost="True" Icon="pack://siteoforigin:,,,/Resources/Hotel Royal SV Logo.ico">
+        Title="Inicio de seción" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FF181818" Foreground="White" Topmost="True" MaxWidth="800" MaxHeight="450" MinWidth="800" MinHeight="449" WindowStyle="ToolWindow" Icon="Resources/Hotel Royal SV Logo.ico">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="35"/>
@@ -14,7 +14,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Border x:Name="BRD_Titulo" Grid.Row="0" Background="#FF050964">
+        <Border x:Name="BRD_Titulo" Grid.Row="0" Background="#FF050964" ToolTip="Disfruta con nosotros, ingresa o registrate ahora">
             <Label x:Name="LBL_Titulo" Content="HOTEL ROYAL S.V" TabIndex="0" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Border>
 
@@ -32,41 +32,53 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Image x:Name="IMG_User" Grid.Row="0" Grid.Column="0"/>
+                <Image x:Name="IMG_User" Grid.Row="0" Grid.Column="0" Source="Resources/028-user-1.png" Margin="20" StretchDirection="DownOnly"/>
 
-                <Image x:Name="IMG_Password" Grid.Row="1" Grid.Column="0"/>
+                <Image x:Name="IMG_Password" Grid.Row="1" Grid.Column="0" Margin="20" Source="Resources/006-key.png"/>
 
                 <Image x:Name="IMG_Information" Grid.Row="0" Grid.Column="2"/>
 
-                <TextBlock x:Name="TXT_Usuario" Grid.Column="1" Grid.Row="0" Text="Usuario"/>
+                <TextBox x:Name="TXT_Usuario" Grid.Column="1" Grid.Row="0" Cursor="IBeam" Margin="30" Background="#FFF6F6F6" Foreground="Black" Padding="0,10,0,0" TextAlignment="Center" ToolTip="Ingrese su usuario" Focusable="True"/>
 
-                <PasswordBox x:Name="PSW_UserPassword" Grid.Row="1" Grid.Column="1"/>
+                <PasswordBox x:Name="PSW_UserPassword" Grid.Row="1" Grid.Column="1" Margin="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF6F6F6" BorderBrush="#FF0040FF" Cursor="IBeam" ToolTip="Ingrese su contraseña"/>
 
-                <CheckBox x:Name="CHB_User_Client" Grid.Row="2" Grid.Column="1"/>
+                <CheckBox x:Name="CHB_User_Client" Grid.Row="2" Grid.Column="1" Foreground="White" Background="#E596F7F7" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Soy empleado" IsChecked="True" Cursor="Hand" ToolTip="Por favor, desmarque esta opcion si no es un empleado"/>
 
             </Grid>
         </Border>
 
         <Border Grid.Row="2">
-            <Label x:Name="LBL_Password_Request" Content="Has olvidado tu contraseña?" Hyperlink.Click="LBL_Password_Request_Click"/>
+            <Label x:Name="LBL_Password_Request" Content="Has olvidado tu contraseña?" Hyperlink.Click="LBL_Password_Request_Click" Background="#FF050964" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Cursor="Hand" FontStyle="Italic" FontWeight="Bold" ToolTip="Recuperar contraseña por correo electronico"/>
         </Border>
 
         <Border Grid.Row="3">
-            <Grid>
+            <Grid Background="#FF394371">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="267"/>
                     <ColumnDefinition Width="267"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="BTN_Acept" Content="Aceptar" Grid.Column="0"/>
+                <Button x:Name="BTN_Acept" Content="Aceptar" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Background="#FFFCC438" Margin="0" RenderTransformOrigin="0,0" IsDefault="True" Cursor="Hand" MaxWidth="207" MaxHeight="54" Width="207" Height="54" Grid.IsSharedSizeScope="True" FontWeight="Bold" Click="BTN_Acept_Click">
+                    <Button.Effect>
+                        <DropShadowEffect Color="#FFC5A555"/>
+                    </Button.Effect>
+                </Button>
 
-                <Button x:Name="BTN_SingUp" Content="Registrar" Grid.Column="1"/>
+                <Button x:Name="BTN_SingUp" Content="Registrar" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Background="#FFC7E848" Margin="0" Cursor="Hand" MaxWidth="207" MaxHeight="54" Width="207" Height="54" ToolTip="No tienes usuario? Registrate ahora!" FontWeight="Bold">
+                    <Button.Effect>
+                        <DropShadowEffect Color="#FF90A24C"/>
+                    </Button.Effect>
+                </Button>
 
-                <Button x:Name="BTN_Cancel" Content="Cancelar" Grid.Column="2"/>
+                <Button x:Name="BTN_Cancel" Content="Cancelar" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2" Background="#FFA00100" Foreground="White" Margin="0" FontWeight="Bold" IsCancel="True" Cursor="Hand" MaxWidth="198" MaxHeight="54" Width="198" Height="54">
+                    <Button.Effect>
+                        <DropShadowEffect Color="#FFB64545"/>
+                    </Button.Effect>
+                </Button>
 
             </Grid>
         </Border>
-        
+
     </Grid>
 </Window>

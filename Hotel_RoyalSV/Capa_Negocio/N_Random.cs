@@ -12,8 +12,10 @@ namespace Capa_Negocio
     {
         public static DataTable Random_Exist(string table, int id)
         {
-            D_Random OBJ = new D_Random();
-            OBJ.ID = id;
+            D_Random OBJ = new D_Random
+            {
+                ID = id
+            };
 
             return OBJ.Number_Exist(table, OBJ);
         }
