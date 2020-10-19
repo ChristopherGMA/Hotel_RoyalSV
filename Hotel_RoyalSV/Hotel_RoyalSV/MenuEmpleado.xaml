@@ -1,0 +1,113 @@
+﻿<Window x:Class="Hotel_RoyalSV.MenuEmpleado"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hotel_RoyalSV"
+        mc:Ignorable="d"
+        Title="Menu" Height="450" Width="800" Icon="Resources/Hotel Royal SV Logo.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" ToolTip="Estamos felices de que estes aqui.">
+            <Label x:Name="LBL_Title" Content="BIENVENIDO" ToolTip="Estamos felices de que estes aqui." HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF1D826E" FontWeight="Bold"/>
+        </Border>
+
+        <Border Grid.Row="1" Background="#FF333333">
+            <Button x:Name="BTN_Out" Content="Cerrar Cesion" HorizontalAlignment="Right" Background="#FFA00100" Foreground="White" Click="BTN_Out_Click"/>
+        </Border>
+
+        <Border Grid.Row="2" Background="#FF333333">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" Grid.Row="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="48"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Row="0" x:Name="IMG_Reservas"/>
+                        <Button Grid.Row="1" x:Name="BTN_Reservas" Content="Reservas" Background="#FF394371" Foreground="#FFF1F0F0"/>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Column="1" Grid.Row="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="48"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Row="0" x:Name="IMG_Costos"/>
+                        <Button Grid.Row="1" x:Name="BTN_Costos" Content="Costos" Background="#FF394371" Foreground="#FFF1F0F0"/>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Column="2" Grid.Row="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="48"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Row="0" x:Name="IMG_Habitaciones"/>
+                        <Button Grid.Row="1" x:Name="BTN_Habitaciones" Content="Habitaciones" Background="#FF394371" Foreground="#FFF1F0F0"/>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Column="0" Grid.Row="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="48"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Row="0" x:Name="IMG_Servicios"/>
+                        <Button Grid.Row="1" x:Name="BTN_Servicios" Content="Servicios" Background="#FF394371" Foreground="#FFF1F0F0"/>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Column="1" Grid.Row="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="48"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Row="0" x:Name="IMG_Empleados"/>
+                        <Button Grid.Row="1" x:Name="BTN_Empleados" Content="Empleados" Background="#FF394371" Foreground="#FFF1F0F0"/>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Column="2" Grid.Row="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="48"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Row="0" x:Name="IMG_Cliente"/>
+                        <Button Grid.Row="1" x:Name="BTN_Cliente" Content="Cliente" Background="#FF394371" Foreground="#FFF1F0F0"/>
+                    </Grid>
+                </Border>
+
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>

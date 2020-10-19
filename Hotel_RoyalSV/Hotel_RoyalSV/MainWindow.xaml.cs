@@ -47,7 +47,9 @@ namespace Hotel_RoyalSV
                     loing = N_Empleado.Loing(TXT_Usuario.Text, PSW_UserPassword.Password);
                     if (loing.Rows.Count == 1)
                     {
-                        MessageBox.Show("Bienvenido");
+                        MenuEmpleado empleado = new MenuEmpleado();
+                        empleado.Show();
+                        this.Hide();
                     }
                     else
                     {
@@ -59,6 +61,11 @@ namespace Hotel_RoyalSV
             {
                 MessageBox.Show(err.Message + "\n" + err.StackTrace);
             }
+        }
+
+        private void Loing_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

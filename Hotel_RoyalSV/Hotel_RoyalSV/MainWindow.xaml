@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hotel_RoyalSV"
         mc:Ignorable="d"
-        Title="Inicio de seción" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FF181818" Foreground="White" Topmost="True" MaxWidth="800" MaxHeight="450" MinWidth="800" MinHeight="449" WindowStyle="ToolWindow" Icon="Resources/Hotel Royal SV Logo.ico">
+        Title="Inicio de seción" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FF181818" Foreground="White" Topmost="True" MaxWidth="800" MaxHeight="450" MinWidth="800" MinHeight="449" WindowStyle="ToolWindow" Icon="Resources/Hotel Royal SV Logo.ico" Closing="Loing_Closing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="35"/>
