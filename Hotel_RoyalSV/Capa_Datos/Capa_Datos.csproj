@@ -44,7 +44,10 @@
   <ItemGroup>
     <Compile Include="D_Coneccion.cs" />
     <Compile Include="D_Empleado.cs" />
+    <Compile Include="D_Habitaciones.cs" />
     <Compile Include="D_Random.cs" />
+    <Compile Include="D_Reservas.cs" />
+    <Compile Include="D_Servicios.cs" />
     <Compile Include="HotelDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
