@@ -85,5 +85,19 @@ namespace Capa_Negocio
 
             return OBJ.Loing(OBJ);
         }
+
+        public static DataTable Ver()
+        {
+            D_Empleado OBJ = new D_Empleado();
+            return OBJ.Ver();
+        }
+
+        public static DataTable BuscarID(int id)
+        {
+            D_Empleado OBJ = new D_Empleado();
+            OBJ.ID_Empleado = id;
+
+            return OBJ.BuscarID(OBJ);
+        }
     }
 }

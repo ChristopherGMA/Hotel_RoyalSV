@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Hotel_RoyalSV
+namespace Hotel_RoyalSV.Pages
 {
     /// <summary>
-    /// Lógica de interacción para Loing2.xaml
+    /// Lógica de interacción para Reserva.xaml
     /// </summary>
-    public partial class Loing2 : Window
+    public partial class Reserva : Page
     {
-        public Loing2()
+        public Reserva()
         {
             InitializeComponent();
         }

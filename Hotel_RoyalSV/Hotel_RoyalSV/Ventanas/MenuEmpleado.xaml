@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hotel_RoyalSV"
         mc:Ignorable="d"
-        Title="Menu" Height="450" Width="800" Icon="Resources/Hotel Royal SV Logo.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+        Title="Menu" Height="450" Width="800" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Icon="/Hotel_RoyalSV;component/Resources/Hotel Royal SV Logo.ico" MinWidth="800" MinHeight="450">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -42,7 +42,7 @@
                         </Grid.RowDefinitions>
 
                         <Image Grid.Row="0" x:Name="IMG_Reservas"/>
-                        <Button Grid.Row="1" x:Name="BTN_Reservas" Content="Reservas" Background="#FF394371" Foreground="#FFF1F0F0"/>
+                        <Button Grid.Row="1" x:Name="BTN_Reservas" Content="Reservas" Background="#FF394371" Foreground="#FFF1F0F0" Click="BTN_Reservas_Click"/>
                     </Grid>
                 </Border>
 
@@ -54,7 +54,7 @@
                         </Grid.RowDefinitions>
 
                         <Image Grid.Row="0" x:Name="IMG_Costos"/>
-                        <Button Grid.Row="1" x:Name="BTN_Costos" Content="Costos" Background="#FF394371" Foreground="#FFF1F0F0"/>
+                        <Button Grid.Row="1" x:Name="BTN_Costos" Content="Costos" Background="#FF394371" Foreground="#FFF1F0F0" Click="BTN_Costos_Click"/>
                     </Grid>
                 </Border>
 
@@ -90,7 +90,7 @@
                         </Grid.RowDefinitions>
 
                         <Image Grid.Row="0" x:Name="IMG_Empleados"/>
-                        <Button Grid.Row="1" x:Name="BTN_Empleados" Content="Empleados" Background="#FF394371" Foreground="#FFF1F0F0"/>
+                        <Button Grid.Row="1" x:Name="BTN_Empleados" Content="Empleados" Background="#FF394371" Foreground="#FFF1F0F0" Click="BTN_Empleados_Click"/>
                     </Grid>
                 </Border>
 

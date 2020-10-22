@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Hotel_RoyalSV.Ventanas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,6 +21,14 @@ namespace Hotel_RoyalSV
     /// </summary>
     public partial class MenuEmpleado : Window
     {
+        Mantenimiento mantenimiento = Mantenimiento.GetInstancia();
+        public void PanelMantenimiento(string title, string url)
+        {
+            mantenimiento.LBL_Title.Content = title;
+            mantenimiento.FR_Content.Navigate(new Uri(url, UriKind.RelativeOrAbsolute));
+            mantenimiento.WindowState = WindowState.Normal;
+            mantenimiento.Show();
+        }
         public MenuEmpleado()
         {
             InitializeComponent();
@@ -38,6 +48,21 @@ namespace Hotel_RoyalSV
                 loing.Show();
                 this.Hide();
             }            
+        }
+
+        private void BTN_Reservas_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BTN_Empleados_Click(object sender, RoutedEventArgs e)
+        {
+            PanelMantenimiento("Empleado", "Pages/Empleado.xaml");
+        }
+
+        private void BTN_Costos_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
