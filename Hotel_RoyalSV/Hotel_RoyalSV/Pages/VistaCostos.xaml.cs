@@ -70,7 +70,7 @@ namespace Hotel_RoyalSV.Pages
                 else
                 {
                     DataTable Datos = new DataTable();
-                    Datos = N_Empleado.Buscar_DUI(TXT_Dui.Text);
+                    Datos = N_Costos.Buscar_DUI(TXT_Dui.Text);
                     DT_View.ItemsSource = Datos.DefaultView;
                 }
             }
