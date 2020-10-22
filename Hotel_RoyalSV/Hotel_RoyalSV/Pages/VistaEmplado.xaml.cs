@@ -7,15 +7,9 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Forms;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Capa_Negocio;
-using Hotel_RoyalSV.Ventanas;
+
 
 namespace Hotel_RoyalSV.Pages
 {
@@ -24,8 +18,11 @@ namespace Hotel_RoyalSV.Pages
     /// </summary>
     public partial class VistaEmplado : Page
     {
+        #region Variables
         private static VistaEmplado _Instancia = new VistaEmplado();
+        #endregion
 
+        #region Metodos Externos
         public static VistaEmplado GetInstancia()
         {
             if (_Instancia == null)
@@ -50,6 +47,8 @@ namespace Hotel_RoyalSV.Pages
             }
             return DAT;
         }
+        #endregion
+
 
         public VistaEmplado()
         {
@@ -111,7 +110,7 @@ namespace Hotel_RoyalSV.Pages
 
         private void DT_View_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-                                
+            BTN_Back_Click_1(null, e);
         }
 
         private void DT_View_SelectionChanged(object sender, SelectionChangedEventArgs e)

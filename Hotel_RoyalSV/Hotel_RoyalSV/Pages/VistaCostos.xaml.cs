@@ -21,8 +21,11 @@ namespace Hotel_RoyalSV.Pages
     /// </summary>
     public partial class VistaCostos : Page
     {
+        #region Variables
         private static VistaCostos _Instancia = new VistaCostos();
+        #endregion
 
+        #region Metodos Externos
         public static VistaCostos GetInstancia()
         {
             if (_Instancia == null)
@@ -37,7 +40,7 @@ namespace Hotel_RoyalSV.Pages
             DataTable DAT = new DataTable();
             try
             {
-                DAT = N_Costos.Ver();
+                //DAT = N_Costos.Ver();
                 DT_View.ItemsSource = DAT.DefaultView;
             }
             catch (Exception err)
@@ -47,6 +50,7 @@ namespace Hotel_RoyalSV.Pages
             }
             return DAT;
         }
+        #endregion
 
         public VistaCostos()
         {
@@ -70,7 +74,7 @@ namespace Hotel_RoyalSV.Pages
                 else
                 {
                     DataTable Datos = new DataTable();
-                    Datos = N_Costos.Buscar_DUI(TXT_Dui.Text);
+                    //Datos = N_Costos.Buscar_DUI(TXT_Dui.Text);
                     DT_View.ItemsSource = Datos.DefaultView;
                 }
             }
@@ -96,7 +100,7 @@ namespace Hotel_RoyalSV.Pages
                 else
                 {
                     DataTable Datos = new DataTable();
-                    Datos = N_Costos.Buscar_DUI(TXT_Dui.Text);
+                    //Datos = N_Costos.Buscar_DUI(TXT_Dui.Text);
                     DT_View.ItemsSource = Datos.DefaultView;
                 }
             }

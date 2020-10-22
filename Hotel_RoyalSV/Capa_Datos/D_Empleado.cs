@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -476,6 +472,7 @@ namespace Capa_Datos
             }
         }
 
+        //Comprobar datos con ID
         public DataTable BuscarID(D_Empleado empleado)
         {
             DataTable DAT = new DataTable("EMPLEADO");

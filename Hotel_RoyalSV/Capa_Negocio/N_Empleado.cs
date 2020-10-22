@@ -6,6 +6,7 @@ namespace Capa_Negocio
 {
     public class N_Empleado
     {
+        //Insertar
         public static string Insertar(int id_empleado, string nombre, string apellido, int edad, string correo,
                                         string telefono, string celular, string dui, string nit, string isss,
                                         string usuario, String contraseña, string puesto, string departamento)
@@ -29,6 +30,7 @@ namespace Capa_Negocio
             return OBJ.Insertar(OBJ);
         }
 
+        //Editar
         public static string Editar(int id_empleado, string nombre, string apellido, int edad, string correo,
                                         string telefono, string celular, string dui, string nit, string isss,
                                         string usuario, String contraseña, string puesto, string departamento)
@@ -52,6 +54,7 @@ namespace Capa_Negocio
             return OBJ.Editar(OBJ);
         }
 
+        //Eliminar
         public static string Eliminar(int id_empleado)
         {
             D_Empleado OBJ = new D_Empleado();
@@ -60,6 +63,7 @@ namespace Capa_Negocio
             return OBJ.Eliminar(OBJ);
         }
 
+        //Anular
         public static string Anular(int id_empleado, string puesto)
         {
             D_Empleado OBJ = new D_Empleado();
@@ -69,6 +73,7 @@ namespace Capa_Negocio
             return OBJ.Anular(OBJ);
         }
 
+        //Buscar un empleado por DUI
         public static DataTable Buscar_DUI(string dui)
         {
             D_Empleado OBJ = new D_Empleado();
@@ -77,6 +82,7 @@ namespace Capa_Negocio
             return OBJ.Buscar_DUI(OBJ);
         }
 
+        //Login
         public static DataTable Loing(string usuario, string contraseña)
         {
             D_Empleado OBJ = new D_Empleado();
@@ -86,12 +92,14 @@ namespace Capa_Negocio
             return OBJ.Loing(OBJ);
         }
 
+        //Mostrar Datos
         public static DataTable Ver()
         {
             D_Empleado OBJ = new D_Empleado();
             return OBJ.Ver();
         }
 
+        //Buscar por ID
         public static DataTable BuscarID(int id)
         {
             D_Empleado OBJ = new D_Empleado();

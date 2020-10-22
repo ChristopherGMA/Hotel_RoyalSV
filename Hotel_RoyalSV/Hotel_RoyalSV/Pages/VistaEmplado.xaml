@@ -15,6 +15,5 @@
         </Grid.RowDefinitions>
         <DataGrid x:FieldModifier="public" Grid.Row="1" x:Name="DT_View" Height="auto" Width="auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="SimSun" FontSize="14" BorderThickness="0" CanUserReorderColumns="False" HorizontalGridLinesBrush="#FF140AF0" VerticalGridLinesBrush="#FF008BFF" SelectionMode="Single" KeyDown="DT_View_KeyDown" MouseDoubleClick="DT_View_MouseDoubleClick" SelectionChanged="DT_View_SelectionChanged"/>
         <TextBox Grid.Row="0" x:Name="TXT_Dui" TextWrapping="Wrap" Background="#FF137C8D" BorderBrush="#FF0CFF00" Foreground="White" FontWeight="Bold" VerticalContentAlignment="Center" TextChanged="TXT_Dui_TextChanged" HorizontalContentAlignment="Center"/>
-
     </Grid>
 </Page>
