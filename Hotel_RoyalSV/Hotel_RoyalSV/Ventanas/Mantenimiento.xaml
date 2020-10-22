@@ -1,0 +1,23 @@
+﻿<Window x:Name="Mantenimiento1" x:Class="Hotel_RoyalSV.Ventanas.Mantenimiento"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hotel_RoyalSV.Ventanas"
+        mc:Ignorable="d"
+        Title="Mantenimiento" Height="600" Width="1000" Icon="/Hotel_RoyalSV;component/Resources/Hotel Royal SV Logo.ico" WindowStartupLocation="CenterScreen" Background="#FF202020" Foreground="White" WindowStyle="ThreeDBorderWindow" Closing="Mantenimiento1_Closing" MinWidth="800" MinHeight="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" x:Name="LBL_Title" x:FieldModifier="public" Content="Tabla?" Background="#FF1D826E" FontWeight="Bold" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+
+        <Button Grid.Row="1" x:Name="BTN_Back" Content="Volver" HorizontalAlignment="Right" Width="90" Background="#FFA00100" Foreground="#FFFFF7F7" FontWeight="Bold" Click="BTN_Back_Click"/>
+
+        <Frame Grid.Row="2" x:Name="FR_Content" x:FieldModifier="public"/>
+
+    </Grid>
+</Window>

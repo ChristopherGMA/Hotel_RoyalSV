@@ -38,6 +38,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -68,14 +69,98 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MenuEmpleado.xaml">
+    <Page Include="Pages\Costos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Empleado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Habitacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Reserva.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Servicios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\VistaCostos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\VistaHabitaciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\VistaReserva.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\VistaServicios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\ManejarVistas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Mantenimiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\MenuEmpleado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\VistaEmplado.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MenuEmpleado.xaml.cs">
+    <Compile Include="Pages\Costos.xaml.cs">
+      <DependentUpon>Costos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Empleado.xaml.cs">
+      <DependentUpon>Empleado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Habitacion.xaml.cs">
+      <DependentUpon>Habitacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Reserva.xaml.cs">
+      <DependentUpon>Reserva.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Servicios.xaml.cs">
+      <DependentUpon>Servicios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VistaCostos.xaml.cs">
+      <DependentUpon>VistaCostos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VistaHabitaciones.xaml.cs">
+      <DependentUpon>VistaHabitaciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VistaReserva.xaml.cs">
+      <DependentUpon>VistaReserva.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VistaServicios.xaml.cs">
+      <DependentUpon>VistaServicios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\ManejarVistas.xaml.cs">
+      <DependentUpon>ManejarVistas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mantenimiento.xaml.cs">
+      <DependentUpon>Mantenimiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\MenuEmpleado.xaml.cs">
       <DependentUpon>MenuEmpleado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VistaEmplado.xaml.cs">
+      <DependentUpon>VistaEmplado.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -103,7 +188,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Hotel Royal SV Logo.ico" />
+    <Resource Include="Resources\Hotel Royal SV Logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Negocio\Capa_Negocio.csproj">
@@ -116,6 +203,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\028-user-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\info.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,50 @@
+﻿<Page x:Class="Hotel_RoyalSV.Pages.Empleado"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Hotel_RoyalSV.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Empleado">
+
+    <Grid x:Name="GR_Content">
+        <Label x:Name="LBL_Nombre" Content="Nombre:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Height="31" Foreground="White"/>
+        <Label x:Name="LBL_Apellido" Content="Apellido:" Margin="0,31,0,0" Width="72" Height="31" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="LBL_Edad" Content="Edad:" Width="72" Height="31" Margin="0,62,728,357" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="LBL_orreo" Content="Correo" Width="72" Height="31" Margin="0,93,728,326" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="LBL_Telefono" Content="Telefono" Width="72" Height="31" Margin="0,124,728,295" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="LBL_Celular" Content="Celular" Width="72" Height="31" Margin="0,155,728,264" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="LBL_Dui" Content="DUI" Width="72" Height="31" Margin="2,186,726,233" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="LBL_Nit" Content="NIT" Width="72" Height="31" Margin="0,217,728,202" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="LBL_Isss" Content="ISSS" Width="72" Height="31" Margin="0,248,728,171" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="LBL_Usuario" Content="Usuario" Width="72" Height="31" Margin="0,279,728,140" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="LBL_Contraseña" Content="Contraseña" Width="72" Height="31" Margin="0,310,728,109" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="LBL_Puesto" Content="Puesto" Width="72" Height="31" Margin="2,341,726,78" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="LBL_Departamento" Content="Departamento" Width="87" Height="31" Margin="2,372,0,0" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:FieldModifier="public" x:Name="TXT_ID" Height="31" Margin="509,347,0,0" Foreground="#FF1DE62F" VerticalAlignment="Top" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" Cursor="IBeam" TextChanged="TXT_ID_TextChanged" KeyDown="TXT_ID_KeyDown"/>
+        <Label x:Name="LBL_ID" Content="Buscar informacion del empleado:" Width="335" Height="31" Margin="465,316,0,0" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+        <TextBox x:Name="TXT_Nombre" HorizontalAlignment="Left" Height="20" Margin="100,4,0,0" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Width="350" SpellCheck.IsEnabled="True" Cursor="IBeam" BorderBrush="#FF0644FD" KeyDown="TXT_Nombre_KeyDown"/>
+        <TextBox x:Name="TXT_Apellido" HorizontalAlignment="Left" Height="20" Margin="100,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" SpellCheck.IsEnabled="True" Cursor="IBeam" BorderBrush="#FF0644FD" KeyDown="TXT_Apellido_KeyDown"/>
+        <TextBox x:Name="TXT_Edad" HorizontalAlignment="Left" Height="20" Margin="100,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" SpellCheck.IsEnabled="True" Cursor="IBeam" BorderBrush="#FF0644FD" KeyDown="TXT_Edad_KeyDown"/>
+        <TextBox x:Name="TXT_Correo" HorizontalAlignment="Left" Height="20" Margin="100,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" SpellCheck.IsEnabled="True" Cursor="IBeam" BorderBrush="#FF0644FD" KeyDown="TXT_Correo_KeyDown"/>
+        <TextBox x:Name="TXT_Telefono" HorizontalAlignment="Left" Height="20" Margin="100,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" SpellCheck.IsEnabled="True" Cursor="IBeam" BorderBrush="#FF0644FD" KeyDown="TXT_Telefono_KeyDown"/>
+        <TextBox x:Name="TXT_Celular" HorizontalAlignment="Left" Height="20" Margin="100,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" SpellCheck.IsEnabled="True" Cursor="IBeam" BorderBrush="#FF0644FD" KeyDown="TXT_Celular_KeyDown"/>
+        <TextBox x:Name="TXT_Dui" HorizontalAlignment="Left" Height="20" Margin="100,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" SpellCheck.IsEnabled="True" Cursor="IBeam" BorderBrush="#FF0644FD" KeyDown="TXT_Dui_KeyDown"/>
+        <TextBox x:Name="TXT_Nit" HorizontalAlignment="Left" Height="20" Margin="100,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" SpellCheck.IsEnabled="True" Cursor="IBeam" BorderBrush="#FF0644FD" KeyDown="TXT_Nit_KeyDown"/>
+        <TextBox x:Name="TXT_Isss" HorizontalAlignment="Left" Height="20" Margin="100,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" SpellCheck.IsEnabled="True" Cursor="IBeam" BorderBrush="#FF0644FD" KeyDown="TXT_Isss_KeyDown"/>
+        <TextBox x:Name="TXT_Usuario" HorizontalAlignment="Left" Height="20" Margin="100,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" SpellCheck.IsEnabled="True" Cursor="IBeam" BorderBrush="#FF0644FD" KeyDown="TXT_Usuario_KeyDown"/>
+        <TextBox x:Name="TXT_Contraseña" HorizontalAlignment="Left" Height="20" Margin="100,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" SpellCheck.IsEnabled="True" Cursor="IBeam" BorderBrush="#FF0644FD" KeyDown="TXT_Contraseña_KeyDown"/>
+        <TextBox x:Name="TXT_Puesto" HorizontalAlignment="Left" Height="20" Margin="100,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" SpellCheck.IsEnabled="True" Cursor="IBeam" BorderBrush="#FF0644FD" KeyDown="TXT_Puesto_KeyDown"/>
+        <TextBox x:Name="TXT_Departamento" HorizontalAlignment="Left" Height="20" Margin="100,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" SpellCheck.IsEnabled="True" Cursor="IBeam" BorderBrush="#FF0644FD" KeyDown="TXT_Departamento_KeyDown"/>
+        <Button x:Name="BTN_Insertar" Content="Ingresar" HorizontalAlignment="Left" Margin="0,418,0,0" VerticalAlignment="Bottom" Width="128" Height="32" Foreground="#FFFFFDFD" BorderBrush="#FF25F504" Background="#FF394371" Cursor="Hand" Click="BTN_Insertar_Click"/>
+        <Button x:Name="BTN_Eliminar" HorizontalAlignment="Right" Margin="672,0,0,0" VerticalAlignment="Bottom" Width="128" Height="32" Content="Eliminar" Foreground="#FFFFFDFD" BorderBrush="#FF5615C9" Background="#FFC92D39" Cursor="Hand" Click="BTN_Eliminar_Click"/>
+        <Button x:Name="BTN_Editar" Content="Editar" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="128" Height="32" Margin="135,418,0,0" Foreground="#FFFFFDFD" BorderBrush="#FF25F504" Background="#FF394371" Cursor="Hand" Click="BTN_Editar_Click"/>
+        <Button x:Name="BTN_Anular" Margin="268,0,404,0" VerticalAlignment="Bottom" Width="128" Height="32" Content="Anular" Foreground="#FFFFFDFD" BorderBrush="#FF25F504" Background="#FF394371" Cursor="Hand" Click="BTN_Anular_Click"/>
+        <Button x:Name="BTN_Ver" Margin="401,0,271,0" VerticalAlignment="Bottom" Width="128" Height="32" Content="Lista" Foreground="#FFFFFDFD" BorderBrush="#FF25F504" Background="#FF394371" Cursor="Hand" Click="BTN_Ver_Click"/>
+        <Image Height="290" Margin="465,4,10,0" VerticalAlignment="Top" Source="/Hotel_RoyalSV;component/Resources/028-user-1.png"/>
+        <Button x:Name="BTN_Buscar" Margin="534,0,138,0" VerticalAlignment="Bottom" Width="128" Height="32" Content="Buscar" Foreground="#FFFFFDFD" BorderBrush="#FF25F504" Background="#FF394371" Cursor="Hand" Click="BTN_Buscar_Click"/>
+        <Image x:Name="IMG_Info" HorizontalAlignment="Left" Height="22" Margin="477,356,0,0" VerticalAlignment="Top" Width="27" Source="/Hotel_RoyalSV;component/Resources/info.png" ToolTip="Al seleccionar un elemento de la lista, automaticamente se copiara al portapales su ID"/>
+        <Button x:Name="BTN_Limpiar" Content="Limpiar" Margin="725,381,0,47" Background="#FFE45F42" BorderBrush="#FFFFE800" Foreground="#FFFFFCFC" FontWeight="Bold" ToolTip="Limpiar los cuadros de texto" Click="BTN_Limpiar_Click" Width="75" Height="22" HorizontalAlignment="Right"/>
+    </Grid>
+</Page>

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -74,6 +70,7 @@ namespace Capa_Datos
             {
                 try
                 {
+                    CON.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = CON;
                     cmd.CommandText = "SP_Insertar_Empleado";
@@ -86,18 +83,18 @@ namespace Capa_Datos
                     cmd.Parameters.Add(ParIDEmpleado);
 
                     SqlParameter ParNombre = new SqlParameter();
-                    ParNombre.ParameterName = "@Nombre";
+                    ParNombre.ParameterName = "@Nombres";
                     ParNombre.SqlDbType = SqlDbType.VarChar;
                     ParNombre.Size = 250;
                     ParNombre.Value = empleado.Nombre;
                     cmd.Parameters.Add(ParNombre);
 
                     SqlParameter ParApellido = new SqlParameter();
-                    ParApellido.ParameterName = "@Apellido";
+                    ParApellido.ParameterName = "@Apellidos";
                     ParApellido.SqlDbType = SqlDbType.VarChar;
                     ParApellido.Size = 250;
                     ParApellido.Value = empleado.Apellido;
-                    cmd.Parameters.Add(ParNombre);
+                    cmd.Parameters.Add(ParApellido);
 
                     SqlParameter ParEdad = new SqlParameter();
                     ParEdad.ParameterName = "@Edad";
@@ -155,7 +152,7 @@ namespace Capa_Datos
                     cmd.Parameters.Add(ParUsuario);
 
                     SqlParameter ParContraseña = new SqlParameter();
-                    ParContraseña.ParameterName = "@Contraseña";
+                    ParContraseña.ParameterName = "@Contrasena";
                     ParContraseña.SqlDbType = SqlDbType.VarChar;
                     ParContraseña.Size = 50;
                     ParContraseña.Value = empleado.Contraseña;
@@ -193,6 +190,7 @@ namespace Capa_Datos
             {
                 try
                 {
+                    CON.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = CON;
                     cmd.CommandText = "SP_Editar_Empleado";
@@ -205,18 +203,18 @@ namespace Capa_Datos
                     cmd.Parameters.Add(ParIDEmpleado);
 
                     SqlParameter ParNombre = new SqlParameter();
-                    ParNombre.ParameterName = "@Nombre";
+                    ParNombre.ParameterName = "@Nombres";
                     ParNombre.SqlDbType = SqlDbType.VarChar;
                     ParNombre.Size = 250;
                     ParNombre.Value = empleado.Nombre;
                     cmd.Parameters.Add(ParNombre);
 
                     SqlParameter ParApellido = new SqlParameter();
-                    ParApellido.ParameterName = "@Apellido";
+                    ParApellido.ParameterName = "@Apellidos";
                     ParApellido.SqlDbType = SqlDbType.VarChar;
                     ParApellido.Size = 250;
                     ParApellido.Value = empleado.Apellido;
-                    cmd.Parameters.Add(ParNombre);
+                    cmd.Parameters.Add(ParApellido);
 
                     SqlParameter ParEdad = new SqlParameter();
                     ParEdad.ParameterName = "@Edad";
@@ -274,7 +272,7 @@ namespace Capa_Datos
                     cmd.Parameters.Add(ParUsuario);
 
                     SqlParameter ParContraseña = new SqlParameter();
-                    ParContraseña.ParameterName = "@Contraseña";
+                    ParContraseña.ParameterName = "@Contrasena";
                     ParContraseña.SqlDbType = SqlDbType.VarChar;
                     ParContraseña.Size = 50;
                     ParContraseña.Value = empleado.Contraseña;
@@ -313,6 +311,7 @@ namespace Capa_Datos
             {
                 try
                 {
+                    CON.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = CON;
                     cmd.CommandText = "SP_Eliminar_Empleado";
@@ -381,6 +380,7 @@ namespace Capa_Datos
             {
                 try
                 {
+                    CON.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = CON;
                     cmd.CommandText = "Buscar_Dui_Empleado";
@@ -396,8 +396,9 @@ namespace Capa_Datos
                     SqlDataAdapter Adapter = new SqlDataAdapter(cmd);
                     Adapter.Fill(DAT);
                 }
-                catch (Exception)
+                catch (Exception err)
                 {
+                    System.Windows.MessageBox.Show(err.Message + "\n" + err.StackTrace);
                     DAT = null;
                 }
 
@@ -413,6 +414,7 @@ namespace Capa_Datos
             {
                 try
                 {
+                    CON.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = CON;
                     cmd.CommandText = "SP_Login_Empleado";
@@ -440,6 +442,64 @@ namespace Capa_Datos
                     DAT = null;
                 }
 
+                return DAT;
+            }
+        }
+
+        //Mostrar datos
+        public DataTable Ver()
+        {
+            DataTable DAT = new DataTable("EMPLEADO");
+            using (SqlConnection CON = D_Coneccion.Coneccion())
+            {
+                try
+                {
+                    CON.Open();
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = CON;
+                    cmd.CommandText = "SPVer_Empleado";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(DAT);
+                }
+                catch (Exception err)
+                {
+                    System.Windows.MessageBox.Show(err.Message + "\n" + err.StackTrace);
+                    DAT = null;
+                }
+                return DAT;
+            }
+        }
+
+        //Comprobar datos con ID
+        public DataTable BuscarID(D_Empleado empleado)
+        {
+            DataTable DAT = new DataTable("EMPLEADO");
+            using (SqlConnection CON = D_Coneccion.Coneccion())
+            {
+                try
+                {
+                    CON.Open();
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = CON;
+                    cmd.CommandText = "SPBuscar_ID_Empleado";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlParameter ParID = new SqlParameter();
+                    ParID.ParameterName = "@ID";
+                    ParID.SqlDbType = SqlDbType.Int;
+                    ParID.Value = empleado.ID_Empleado;
+                    cmd.Parameters.Add(ParID);
+
+                    SqlDataAdapter Adapter = new SqlDataAdapter(cmd);
+                    Adapter.Fill(DAT);
+                }
+                catch (Exception err)
+                {
+                    DAT = null;
+                    System.Windows.MessageBox.Show(err.Message + "\n" + err.StackTrace);
+                }
                 return DAT;
             }
         }
