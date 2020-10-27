@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="D_Cliente.cs" />
     <Compile Include="D_Coneccion.cs" />
+    <Compile Include="D_Costos.cs" />
     <Compile Include="D_Empleado.cs" />
     <Compile Include="D_Habitaciones.cs" />
     <Compile Include="D_Random.cs" />
