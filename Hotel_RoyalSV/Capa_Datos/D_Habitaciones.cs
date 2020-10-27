@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Capa_Datos
 {
-    class D_Habitaciones
+    public class D_Habitaciones
     {
         private int _IDHabitacion;
         private int _IDCliente;

@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Capa_Datos
 {
-    class D_Reservas
+    public class D_Reservas
     {
         //definicion de variables
         private int _IDReserva;
@@ -41,7 +41,7 @@ namespace Capa_Datos
             this.Fecha_Entrada = fechaEntrada;
             this.Fecha_Salida = fechaSalida;
             this.Costo_Total = costoTotal;
-
+                
 
         }
 
