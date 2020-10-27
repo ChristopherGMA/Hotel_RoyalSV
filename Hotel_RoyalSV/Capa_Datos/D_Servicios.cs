@@ -17,19 +17,20 @@ namespace Capa_Datos
         private int _Costo;
 
         public int IDServicio { get => _IDServicio; set => _IDServicio = value; }
-        public string Nombre { get => Nombre; set => Nombre = value; }
-        public string Descripcion { get => Descripcion; set => Descripcion = value; }
-        public int Costo { get => Costo; set => Costo = value; }
-
+        public string Nombre { get => _Nombre; set => _Nombre = value; }
+        public string Descripcion { get => _Descripcion; set => _Descripcion = value; }
+        public int Costo { get => _Costo; set => _Costo = value; }
 
         //metodos
 
-        public D_Servicios(int idservicio, string nombre, string descripcion, int costo1)
+        public D_Servicios() { }
+
+        public D_Servicios(int idservicio, string nombre, string descripcion, int costo)
         {
             this.IDServicio = idservicio;
             this.Nombre = nombre;
             this.Descripcion = descripcion;
-            this.Costo = costo1;
+            this.Costo = costo;
         }
         //Insertar
         public string Insertar(D_Servicios servicios)

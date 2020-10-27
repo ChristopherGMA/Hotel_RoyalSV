@@ -102,37 +102,17 @@ namespace Hotel_RoyalSV.Pages
 
         private void TXT_Nombre_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
-            if (e.Key >= Key.A && e.Key <= Key.Z || e.Key >= Key.Enter && e.Key <= Key.Return || e.Key >= Key.Tab)
-                e.Handled = false;
-            else
-                e.Handled = true;
+            Control_Errores.SoloLetras(sender, e);
         }
 
         private void TXT_Apellido_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
-            if (e.Key >= Key.A && e.Key <= Key.Z || e.Key >= Key.Enter && e.Key <= Key.Return || e.Key >= Key.Tab)
-                e.Handled = false;
-            else
-                e.Handled = true;
+            Control_Errores.SoloLetras(sender, e);
         }
 
         private void TXT_Edad_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
-            if (e.Key >= Key.D0 && e.Key <= Key.D9 || e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9)
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                if (e.Key == Key.Enter || e.Key == Key.Return || e.Key == Key.Tab)
-                {
-                    e.Handled = false;
-                }
-                else
-                {
-                    e.Handled = true;
-                }
-            }
+            Control_Errores.SoloNumeros(sender, e);
         }
 
         private void TXT_Correo_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
@@ -177,18 +157,12 @@ namespace Hotel_RoyalSV.Pages
 
         private void TXT_Puesto_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
-            if (e.Key >= Key.A && e.Key <= Key.Z || e.Key >= Key.Enter && e.Key <= Key.Return || e.Key >= Key.Tab)
-                e.Handled = false;
-            else
-                e.Handled = true;
+            Control_Errores.SoloLetras(sender, e);
         }
 
         private void TXT_Departamento_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
-            if (e.Key >= Key.A && e.Key <= Key.Z || e.Key >= Key.Enter && e.Key <= Key.Return || e.Key >= Key.Tab)
-                e.Handled = false;
-            else
-                e.Handled = true;
+            Control_Errores.SoloLetras(sender, e);
         }
 
         private void BTN_Ver_Click(object sender, RoutedEventArgs e)
@@ -230,6 +204,7 @@ namespace Hotel_RoyalSV.Pages
         private void BTN_Limpiar_Click(object sender, RoutedEventArgs e)
         {
             Limpiar();
+            TXT_ID.Focus();
         }
 
         private void TXT_ID_TextChanged(object sender, TextChangedEventArgs e)

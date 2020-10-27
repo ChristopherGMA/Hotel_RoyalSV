@@ -21,7 +21,7 @@ namespace Hotel_RoyalSV.Ventanas
     public partial class ManejarVistas : Window
     {
         private static ManejarVistas _Instancia = new ManejarVistas();        
-
+      
 
         public static ManejarVistas GetInstancia()
         {

@@ -6,9 +6,14 @@
       xmlns:local="clr-namespace:Hotel_RoyalSV.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="VistaHabitaciones">
+      Title="VistaHabitaciones" Initialized="Page_Initialized">
 
     <Grid>
-        
+        <DataGrid x:FieldModifier="public" x:Name="DT_View" Height="auto" Width="auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="SimSun" FontSize="14" BorderThickness="0" CanUserReorderColumns="False" HorizontalGridLinesBrush="#FF140AF0" VerticalGridLinesBrush="#FF008BFF" SelectionMode="Single" KeyDown="DT_View_KeyDown" MouseDoubleClick="DT_View_MouseDoubleClick" SelectionChanged="DT_View_SelectionChanged" Margin="0,30,0,0"/>
+        <Button x:Name="BTN_Activo" Content="Activo" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Width="75" Background="#FF268B17" Foreground="White" BorderBrush="#FFDA591C" Click="BTN_Activo_Click"/>
+        <Button x:Name="BTN_Inactivo" Content="Inctivo" HorizontalAlignment="Left" Margin="80,5,0,0" VerticalAlignment="Top" Width="75" Background="#FF268B17" Foreground="White" BorderBrush="#FFDA591C" Click="BTN_Inactivo_Click"/>
+        <Button x:Name="BTN_Mantenimiento" Content="Mantenimiento" HorizontalAlignment="Left" Margin="160,5,0,0" VerticalAlignment="Top" Width="75" Background="#FF268B17" Foreground="White" BorderBrush="#FFDA591C" Click="BTN_Mantenimiento_Click"/>
+        <Button x:Name="BTN_Ocupado" Content="Ocupado" HorizontalAlignment="Left" Margin="240,5,0,0" VerticalAlignment="Top" Width="75" Background="#FF268B17" Foreground="White" BorderBrush="#FFDA591C" Click="BTN_Ocupado_Click"/>
+
     </Grid>
 </Page>

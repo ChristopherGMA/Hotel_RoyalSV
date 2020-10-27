@@ -64,5 +64,10 @@ namespace Hotel_RoyalSV
         {
 
         }
+
+        private void BTN_Habitaciones_Click(object sender, RoutedEventArgs e)
+        {
+            PanelMantenimiento("Habitaciones", "Pages/Habitacion.xaml");
+        }
     }
 }

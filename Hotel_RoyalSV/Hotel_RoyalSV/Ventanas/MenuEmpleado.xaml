@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hotel_RoyalSV"
         mc:Ignorable="d"
-        Title="Menu" Height="450" Width="800" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Icon="/Hotel_RoyalSV;component/Resources/Hotel Royal SV Logo.ico" MinWidth="800" MinHeight="450">
+        Title="Menu" Height="450" Width="800" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Icon="/Hotel_RoyalSV;component/Resources/Hotel Royal SV Logo.ico" MinWidth="800" MinHeight="450">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -66,7 +66,7 @@
                         </Grid.RowDefinitions>
 
                         <Image Grid.Row="0" x:Name="IMG_Habitaciones"/>
-                        <Button Grid.Row="1" x:Name="BTN_Habitaciones" Content="Habitaciones" Background="#FF394371" Foreground="#FFF1F0F0"/>
+                        <Button Grid.Row="1" x:Name="BTN_Habitaciones" Content="Habitaciones" Background="#FF394371" Foreground="#FFF1F0F0" Click="BTN_Habitaciones_Click"/>
                     </Grid>
                 </Border>
 

@@ -89,6 +89,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\VistaCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\VistaCostos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -123,6 +127,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control_Errores.cs" />
     <Compile Include="Pages\Costos.xaml.cs">
       <DependentUpon>Costos.xaml</DependentUpon>
     </Compile>
@@ -137,6 +142,9 @@
     </Compile>
     <Compile Include="Pages\Servicios.xaml.cs">
       <DependentUpon>Servicios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VistaCliente.xaml.cs">
+      <DependentUpon>VistaCliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\VistaCostos.xaml.cs">
       <DependentUpon>VistaCostos.xaml</DependentUpon>
@@ -206,6 +214,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\info.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Habitacion.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

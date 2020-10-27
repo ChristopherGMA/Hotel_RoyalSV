@@ -9,7 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
 using Capa_Negocio;
-
+using Hotel_RoyalSV.Ventanas;
 
 namespace Hotel_RoyalSV.Pages
 {
@@ -56,32 +56,6 @@ namespace Hotel_RoyalSV.Pages
             Tabla();
         }
 
-        private void BTN_Back_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BTN_Back_Click_1(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (TXT_Dui.Text=="")
-                {
-                    Tabla();
-                }
-                else
-                {
-                    DataTable Datos = new DataTable();
-                    Datos = N_Empleado.Buscar_DUI(TXT_Dui.Text);
-                    DT_View.ItemsSource = Datos.DefaultView;
-                }
-            }
-            catch (Exception err)
-            {
-                System.Windows.MessageBox.Show(err.Message + "\n" + err.StackTrace);
-            }
-        }
-
         private void DT_View_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
             e.Handled = true;
@@ -110,7 +84,8 @@ namespace Hotel_RoyalSV.Pages
 
         private void DT_View_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            BTN_Back_Click_1(null, e);
+            ManejarVistas manejarVistas = ManejarVistas.GetInstancia();
+            manejarVistas.Hide();
         }
 
         private void DT_View_SelectionChanged(object sender, SelectionChangedEventArgs e)

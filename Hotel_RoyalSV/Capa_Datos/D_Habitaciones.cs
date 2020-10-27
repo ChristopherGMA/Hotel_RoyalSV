@@ -46,7 +46,7 @@ namespace Capa_Datos
                     CON.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = CON;
-                    cmd.CommandText = "SP_Insertar_Servicios";
+                    cmd.CommandText = "SP_Insertar_habitacion";
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     SqlParameter ParIDHabitacion = new SqlParameter();
@@ -72,8 +72,6 @@ namespace Capa_Datos
                     ParNumero.SqlDbType = SqlDbType.Int;
                     ParNumero.Value = habitaciones.Numero;
                     cmd.Parameters.Add(ParNumero);
-
-
 
                     SqlParameter ParEstado = new SqlParameter();
                     ParEstado.ParameterName = "@Estado";
@@ -105,7 +103,7 @@ namespace Capa_Datos
                     CON.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = CON;
-                    cmd.CommandText = "SP_Insertar_habitacion";
+                    cmd.CommandText = "SP_Editar_habitacion";
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     SqlParameter ParIDHabitacion = new SqlParameter();
@@ -132,19 +130,17 @@ namespace Capa_Datos
                     ParNumero.Value = habitaciones.Numero;
                     cmd.Parameters.Add(ParNumero);
 
-
-
                     SqlParameter ParEstado = new SqlParameter();
                     ParEstado.ParameterName = "@Estado";
                     ParEstado.SqlDbType = SqlDbType.VarChar;
                     ParEstado.Size = 30;
                     ParEstado.Value = habitaciones.Estado;
                     cmd.Parameters.Add(ParEstado);
-                    RPT = cmd.ExecuteNonQuery() == 1 ? "OK" : "No se inserto el registro";
+                    RPT = cmd.ExecuteNonQuery() == 1 ? "OK" : "No se edito el registro";
                 }
                 catch (Exception err)
                 {
-                    RPT = err.Message;
+                    RPT = err.Message + "\n" + err.StackTrace;
                 }
 
                 return RPT;
@@ -190,7 +186,7 @@ namespace Capa_Datos
         //Bucar por estado
         public DataTable Buscar_Estado(D_Habitaciones habitaciones)
         {
-            DataTable DAT = new DataTable("Habitaciones");
+            DataTable DAT = new DataTable("HABITACIONES");
             using (SqlConnection CON = D_Coneccion.Coneccion())
             {
                 try
@@ -199,12 +195,6 @@ namespace Capa_Datos
                     cmd.Connection = CON;
                     cmd.CommandText = "SP_Buscar_habitacion";
                     cmd.CommandType = CommandType.StoredProcedure;
-
-                    SqlParameter ParIDHabitacion = new SqlParameter();
-                    ParIDHabitacion.ParameterName = "@IDHabitacion";
-                    ParIDHabitacion.SqlDbType = SqlDbType.Int;
-                    ParIDHabitacion.Value = habitaciones.IDHabitacion;
-                    cmd.Parameters.Add(ParIDHabitacion);
 
                     SqlParameter ParEstado = new SqlParameter();
                     ParEstado.ParameterName = "@Estado";
@@ -217,11 +207,43 @@ namespace Capa_Datos
                     SqlDataAdapter Adapter = new SqlDataAdapter(cmd);
                     Adapter.Fill(DAT);
                 }
-                catch (Exception)
+                catch (Exception err)
                 {
+                    System.Windows.MessageBox.Show(err.Message);
                     DAT = null;
                 }
 
+                return DAT;
+            }
+        }
+
+        public DataTable Buscar_ID(D_Habitaciones habitacones)
+        {
+            DataTable DAT = new DataTable("HABITACIONES");
+            using (SqlConnection CON = D_Coneccion.Coneccion())
+            {
+                try
+                {
+                    CON.Open();
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = CON;
+                    cmd.CommandText = "SP_Buscar_Habitacion_ID";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlParameter ParID = new SqlParameter();
+                    ParID.ParameterName = "@ID_Habitacion";
+                    ParID.SqlDbType = SqlDbType.Int;
+                    ParID.Value = habitacones.IDHabitacion;
+                    cmd.Parameters.Add(ParID);
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(DAT);
+                }
+                catch (Exception err)
+                {
+                    System.Windows.MessageBox.Show(err.Message);
+                    DAT = null;
+                }
                 return DAT;
             }
         }

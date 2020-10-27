@@ -12,7 +12,7 @@ namespace Capa_Negocio
     public class N_Servicios
     {
         //Insertar
-        public string Insertar(int idservicios, string nombre, string descripcion, int costo)
+        public static string Insertar(int idservicios, string nombre, string descripcion, int costo)
         {
             D_Servicios OBJ = new D_Servicios();
             OBJ.IDServicio = idservicios;
@@ -26,7 +26,7 @@ namespace Capa_Negocio
         }
 
         //Eliminar
-        public string eliminar(D_Servicios servicios, int idservicio)
+        public static string eliminar(D_Servicios servicios, int idservicio)
         {
             D_Servicios OBJ = new D_Servicios();
             OBJ.IDServicio = idservicio;

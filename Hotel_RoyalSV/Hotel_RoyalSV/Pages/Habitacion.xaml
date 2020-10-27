@@ -6,9 +6,37 @@
       xmlns:local="clr-namespace:Hotel_RoyalSV.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Habitacion">
+      Title="Habitacion" Initialized="Page_Initialized">
 
-    <Grid>
-        
+    <Grid x:Name="GR_Content">
+        <Label x:Name="LBL_Numero" Content="Numero:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Height="31" Foreground="White"/>
+        <Label x:Name="LBL_Estado" Content="Estado:" Margin="0,31,0,0" Width="72" Height="31" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:FieldModifier="public" x:Name="TXT_ID" Height="31" Margin="509,347,0,0" Foreground="#FF1DE62F" VerticalAlignment="Top" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" Cursor="IBeam" TextChanged="TXT_ID_TextChanged" KeyDown="TXT_ID_KeyDown"/>
+        <Label x:Name="LBL_ID" Content="Buscar informacion del empleado:" Width="335" Height="31" Margin="465,316,0,0" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+        <TextBox x:Name="TXT_numero" HorizontalAlignment="Left" Height="20" Margin="100,4,0,0" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Width="350" SpellCheck.IsEnabled="True" Cursor="IBeam" BorderBrush="#FF0644FD" KeyDown="TXT_Nombre_KeyDown"/>
+        <Button x:Name="BTN_Insertar" Content="Ingresar" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="128" Height="32" Foreground="#FFFFFDFD" BorderBrush="#FF25F504" Background="#FF394371" Cursor="Hand" Click="BTN_Insertar_Click"/>
+        <Button x:Name="BTN_Eliminar" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="128" Height="32" Content="Anular" Foreground="#FFFFFDFD" BorderBrush="#FF5615C9" Background="#FFC92D39" Cursor="Hand" Click="BTN_Eliminar_Click"/>
+        <Button x:Name="BTN_Editar" Content="Editar" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="128" Height="32" Margin="135,0,0,0" Foreground="#FFFFFDFD" BorderBrush="#FF25F504" Background="#FF394371" Cursor="Hand" Click="BTN_Editar_Click"/>
+        <Button x:Name="BTN_Ver" Margin="268,0,404,0" VerticalAlignment="Bottom" Width="128" Height="32" Content="Lista" Foreground="#FFFFFDFD" BorderBrush="#FF25F504" Background="#FF394371" Cursor="Hand" Click="BTN_Ver_Click"/>
+        <Image Height="290" Margin="465,4,10,0" VerticalAlignment="Top" Source="/Hotel_RoyalSV;component/Resources/Habitacion.jpg" Stretch="Fill"/>
+        <Button x:Name="BTN_Buscar" Margin="401,0,271,0" VerticalAlignment="Bottom" Width="128" Height="32" Content="Buscar" Foreground="#FFFFFDFD" BorderBrush="#FF25F504" Background="#FF394371" Cursor="Hand" Click="BTN_Buscar_Click"/>
+        <Image x:Name="IMG_Info" HorizontalAlignment="Left" Height="22" Margin="477,356,0,0" VerticalAlignment="Top" Width="27" Source="/Hotel_RoyalSV;component/Resources/info.png" ToolTip="Al seleccionar un elemento de la lista, automaticamente se copiara al portapales su ID"/>
+        <Button x:Name="BTN_Limpiar" Content="Limpiar" Margin="0,381,0,47" Background="#FFE45F42" BorderBrush="#FFFFE800" Foreground="#FFFFFCFC" FontWeight="Bold" ToolTip="Limpiar los cuadros de texto" Click="BTN_Limpiar_Click" Width="75" Height="22" HorizontalAlignment="Right"/>
+        <ComboBox x:Name="CBX_Estado" HorizontalAlignment="Left" Margin="100,40,0,0" VerticalAlignment="Top" Width="350" Background="#FF0A6414" BorderBrush="#FF07236C" Foreground="Black">
+            <ComboBoxItem Cursor="Hand" Content="Activo" BorderBrush="#FF101766" Background="#FF0A6414"/>
+            <ComboBoxItem BorderBrush="#FF080874" Background="#FF0A6414" Cursor="Hand" Content="Inactivo"/>
+            <ComboBoxItem BorderBrush="#FF0D0D51" Background="#FF0A6414" Cursor="Hand" Content="Mantenimiento"/>
+            <ComboBoxItem BorderBrush="#FF070A51" Background="#FF0A6414" Cursor="Hand" Content="Ocupado"/>
+        </ComboBox>
+        <Label x:Name="LBL_Costo" Content="Costo:" Margin="0,69,0,0" Width="72" Height="31" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White"/>
+        <ComboBox x:Name="CBX_Costo" HorizontalAlignment="Left" Margin="100,78,0,0" VerticalAlignment="Top" Width="350" Background="#FF0A6414" BorderBrush="#FF07236C" Foreground="Black">
+            <ComboBoxItem Cursor="Hand" Content="1" BorderBrush="#FF101766" Background="#FF0A6414"/>
+            <ComboBoxItem BorderBrush="#FF080874" Background="#FF0A6414" Cursor="Hand" Content="2"/>
+            <ComboBoxItem BorderBrush="#FF0D0D51" Background="#FF0A6414" Cursor="Hand" Content="3"/>
+            <ComboBoxItem Cursor="Hand" Content="4" Background="#FF0A6414"/>
+        </ComboBox>
+        <Button x:Name="BTN_Vista_Cliente" Content="Ver Clientes" HorizontalAlignment="Left" VerticalAlignment="Top" Width="128" Height="20" Foreground="#FFFFFDFD" BorderBrush="#FF04F5F5" Background="#FF003278" Cursor="Hand" Click="BTN_Vista_Cliente_Click" Margin="0,129,0,0"/>
+        <TextBox x:Name="TXT_ID_Cliente" HorizontalAlignment="Left" Height="20" Margin="135,129,0,0" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Width="164" SpellCheck.IsEnabled="True" Cursor="IBeam" BorderBrush="#FF0644FD" KeyDown="TXT_ID_KeyDown" TabIndex="6" ToolTip="Busque el ID del cliente y peguelo aqui"/>
+
     </Grid>
 </Page>
