@@ -84,8 +84,7 @@ namespace Hotel_RoyalSV.Pages
 
         private void DT_View_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            ManejarVistas manejarVistas = ManejarVistas.GetInstancia();
-            manejarVistas.Hide();
+           
         }
 
         private void DT_View_SelectionChanged(object sender, SelectionChangedEventArgs e)

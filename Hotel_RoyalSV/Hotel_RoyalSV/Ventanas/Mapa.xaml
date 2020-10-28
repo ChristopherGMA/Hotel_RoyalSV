@@ -1,0 +1,80 @@
+﻿<Window x:Name="Mapa_Hotel" x:Class="Hotel_RoyalSV.Ventanas.Mapa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hotel_RoyalSV.Ventanas"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Mapa" Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="/Hotel_RoyalSV;component/Resources/Hotel Royal SV Logo.ico">
+    <Grid x:Name="GR_Content">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+
+        <m:Map Grid.Column="0" Mode="Road" Margin="0,0,0,2" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ZoomLevel="17" Center="13.702628, -89.211942"/>
+        <Canvas
+                    m:MapLayer.Position="13.702628, -89.211942"
+                    m:MapLayer.PositionOrigin="BottomCenter" Width="30" Height="30">
+            <materialDesign:PackIcon Kind="MapMarker" Width="30" Height="30" Foreground="#FF3C3C3C"/>
+        </Canvas>
+
+        <Border x:Name="BR_Controls" Grid.Column="1">
+            <Grid x:Name="GR_Controls">
+                <StackPanel Grid.Row="0" Margin="0,37,0,0">
+                    <Grid>
+                        <TextBox Background="White" Padding="10 0 25 0"/>
+                        <materialDesign:PackIcon Kind="MapMarker" VerticalAlignment="Center" Margin="2"/>
+                        <Button HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFlatButton}">
+                            <materialDesign:PackIcon Kind="Search"/>
+                        </Button>
+                    </Grid>
+                    <ListView>
+                        <ListViewItem>
+                            <Border BorderBrush="LightGray" BorderThickness="0 0 0 1" Width="260">
+                                <Grid Height="50">
+                                    <StackPanel Height="50">
+                                        <TextBlock Text="La Casita Grill"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="4,5" Foreground="#DDFF6F0B" Margin="1" FontSize="10"/>
+                                            <materialDesign:PackIcon Kind="Star" Foreground="#DDFF6F0B" Margin="1" VerticalAlignment="Center" Width="12" Height="12"/>
+                                            <materialDesign:PackIcon Kind="Star" Foreground="#DDFF6F0B" Margin="1" VerticalAlignment="Center" Width="12" Height="12"/>
+                                            <materialDesign:PackIcon Kind="Star" Foreground="#DDFF6F0B" Margin="1" VerticalAlignment="Center" Width="12" Height="12"/>
+                                            <materialDesign:PackIcon Kind="Star" Foreground="#DDFF6F0B" Margin="1" VerticalAlignment="Center" Width="12" Height="12"/>
+                                            <materialDesign:PackIcon Kind="StarHalf" Foreground="#DDFF6F0B" Margin="1" VerticalAlignment="Center" Width="12" Height="12"/>
+                                        </StackPanel>
+                                        <TextBlock Text="Open until 6:00PM" Opacity="0.7"/>
+                                    </StackPanel>
+                                    <Image HorizontalAlignment="Right" Width="50" Height="50" Stretch="UniformToFill" />
+                                </Grid>
+                            </Border>
+                        </ListViewItem>
+                        <ListViewItem>
+                            <Border BorderBrush="LightGray" BorderThickness="0 0 0 1" Width="260">
+                                <Grid Height="50">
+                                    <StackPanel Height="50">
+                                        <TextBlock Text="The Pizza"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="3,5" Foreground="#DDFF6F0B" Margin="1" FontSize="10"/>
+                                            <materialDesign:PackIcon Kind="Star" Foreground="#DDFF6F0B" Margin="1" VerticalAlignment="Center" Width="12" Height="12"/>
+                                            <materialDesign:PackIcon Kind="Star" Foreground="#DDFF6F0B" Margin="1" VerticalAlignment="Center" Width="12" Height="12"/>
+                                            <materialDesign:PackIcon Kind="Star" Foreground="#DDFF6F0B" Margin="1" VerticalAlignment="Center" Width="12" Height="12"/>
+                                            <materialDesign:PackIcon Kind="StarHalf" Foreground="#DDFF6F0B" Margin="1" VerticalAlignment="Center" Width="12" Height="12"/>
+                                            <materialDesign:PackIcon Kind="StarOutline" Foreground="#DDFF6F0B" Margin="1" VerticalAlignment="Center" Width="12" Height="12"/>
+                                        </StackPanel>
+                                        <TextBlock Text="Open until 10:00PM" Opacity="0.7"/>
+                                    </StackPanel>
+                                    <Image HorizontalAlignment="Right" Width="50" Height="50" Stretch="UniformToFill" />
+                                </Grid>
+                            </Border>
+                        </ListViewItem>
+                    </ListView>
+                </StackPanel>
+
+                <Button HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFlatButton}" Margin="0,0,0,387"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

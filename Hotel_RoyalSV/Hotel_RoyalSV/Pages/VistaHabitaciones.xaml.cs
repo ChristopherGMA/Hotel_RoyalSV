@@ -89,7 +89,14 @@ namespace Hotel_RoyalSV.Pages
         private void DT_View_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             DataRowView row = DT_View.SelectedItem as DataRowView;
-            System.Windows.Clipboard.SetText(row.Row.ItemArray[0].ToString());
+            if (row.Row.ItemArray[0] == null)
+            {
+                Tabla();
+            }
+            else
+            {
+                System.Windows.Clipboard.SetText(row.Row.ItemArray[0].ToString());
+            }           
         }
 
         private void Page_Initialized(object sender, EventArgs e)

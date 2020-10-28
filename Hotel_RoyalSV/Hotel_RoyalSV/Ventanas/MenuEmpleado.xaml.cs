@@ -52,7 +52,8 @@ namespace Hotel_RoyalSV
 
         private void BTN_Reservas_Click(object sender, RoutedEventArgs e)
         {
-
+            Mapa map = new Mapa();
+            map.Show();
         }
 
         private void BTN_Empleados_Click(object sender, RoutedEventArgs e)

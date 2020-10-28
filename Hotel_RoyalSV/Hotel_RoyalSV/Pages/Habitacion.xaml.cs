@@ -223,6 +223,7 @@ namespace Hotel_RoyalSV.Pages
 
         private void BTN_Ver_Click(object sender, RoutedEventArgs e)
         {
+            vistas = new Ventanas.ManejarVistas();
             MostrarVista("Habitaciones", "Pages/VistaHabitaciones.xaml");
         }
 
